@@ -43,12 +43,14 @@
     <link rel="stylesheet" href="css/reset.css" />
     <!-- 웹브라우저 간의 스타일 일관성을 유지하고 초기 스타일을 표준화하기 위해 css리셋 스타일 시트입니다. -->
     <link rel="stylesheet" href="css/normalize.css" />
+    
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- js -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
@@ -149,6 +151,75 @@
           </ul>
         </div>
       </header>
+      <section class="promotion">
+        <div class="inner">
+          <div class="section-top">
+            <h2>오늘의 픽</h2>
+            <p>인터파크에서 할인혜택을 꼭 챙기세요.</p>
+          </div>
+          <!-- swiper 적용 -->
+          <div class="promotion-slide">
+            <button class="sw-bt sw-prev">이전</button>
+            <button class="sw-bt sw-next">다음</button>
+            <!-- promotion swiper -->
+            <div class=".swiper sw-promotion">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion1.jpg" alt="프로모션1">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion2.png" alt="프로모션2">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion3.jpg" alt="프로모션3">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion4.jpg" alt="프로모션4">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion5.jpg" alt="프로모션5">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/promotion6.jpg" alt="프로모션6">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        var swiper = new Swiper(".sw-promotion",{
+          slidesPerView:1,
+          spaceBetween: 24,
+          speed: 1000,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".promotion .sw-next",
+            prevEl: ".promotion .sw-prev",
+          },
+          breakpoints: {
+            760: {
+              slidesPerView: 2,
+            },
+          },
+        })
+      </script>
     </div>
   </body>
 </html>
